@@ -148,8 +148,56 @@ var getArtistName = function() {
     artistNameSearchCriteria = (ArtistLastName + "," + ArtistFirstName);
     console.log("artist search criteria is " + artistNameSearchCriteria);
 
+// NEW PHOTO API START
+
+let searchText = document.querySelector("#userinput");
+let photoUrl = 'https://imsea.herokuapp.com/api/1?fmt=json&q=';
 
 
+// , {mode: 'no-cors' }
+// function to recognize the user input
+var getSearch = function() {
+
+searchText.addEventListener('change', (event) => {
+    // run the function that will grab the text
+    getSearchValue();
+})
+
+
+function getSearchValue() {
+    
+    let term = searchText.value;
+    let fullUrl = photoUrl + term;
+    
+    console.log(fullUrl)
+    fetch(fullUrl).then(function(response) {
+        if (response.ok) {
+        response.json().then(function(data) {
+            console.log(data);
+    var photoIDOne = data.results[0];
+    // var photoIDTwo = data.results[4];
+    // var photoIDThree = data.results[19];
+
+    console.log(photoIDOne)
+    displayImage();
+    
+function displayImage () {
+let imageLinkOne = document.querySelector("#photo");
+// let imageLinkTwo = document.querySelector("#photo2");
+// let imageLinkThree = document.querySelector("#photo3");
+imageLinkOne.setAttribute("src", photoIDOne); 
+// imageLinkTwo.setAttribute("src", photoIDTwo); 
+// imageLinkThree.setAttribute("src", photoIDThree); 
+}
+      }); 
+    } 
+    });
+}
+}
+
+
+
+    getSearch();
 
     getArtistInformation();
 
