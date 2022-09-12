@@ -2,7 +2,6 @@
     font-family: 'Mulish', sans-serif;
 }
 
-
 body {
     background-color: rgb(16, 20, 32);
     color: white;
@@ -12,12 +11,8 @@ header {
     background-image: url(../images/concert-header-backsplash.jpg);
 }
 
-.primary-text-color {
+.highlight-text-color {
     color: #ff7777;
-}
-
-.secondary-text-color {
-    color: #ff9191;
 }
 
 .color-bg {
@@ -61,17 +56,18 @@ input {
 
 
 /*footer style*/
-.list-search-history{
+
+.list-search-history {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
 }
 
-.full-list{
-    background-color: gray;
-    border: solid 1px black;
+.full-list {
+    background-color: rgba(104, 31, 31, 0.863);
     border-radius: 10px;
     margin: 5px;
-    padding: 2px;
+    padding: 2px 12px;
+    cursor: pointer;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,42 +12,39 @@
     <title>Concert Listing!</title>
 </head>
 
-<body class="scroll-smooth">
+<body>
     <!-- hero picture  -->
-    <header class="w-full h-screen bg-fixed bg-top md:bg-bottom bg-cover text-center py-4 sm:py-10 md:py-20">
+    <header class="h-screen bg-fixed bg-top md:bg-bottom bg-cover text-center py-4 sm:py-10 md:py-20">
         <!-- welcome container -->
         <div class="border border-2 border-neutral-900 rounded-md color-bg backdrop-blur-sm mx-2 sm:mx-10 md:mx-20 lg:mx-40 py-2 sm:py-4 md:py-6 lg:py-10">
-            <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow">Welcome to <span class="primary-text-color drop-shadow">Music Tours</span></h1>
-            <p class="font-bold text-sm md:text-lg lg:text-2xl py-2 sm:py-4 md:py-6 lg:py-10 ">Your one stop shop for all things <span class="secondary-text-color ">concert related</span>.</p>
+            <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow">Welcome to <span class="highlight-text-color">Music Tours</span></h1>
+            <p class="font-bold text-sm md:text-lg lg:text-2xl py-2 sm:py-4 md:py-6 lg:py-10 ">Your one stop shop for all things <span class="highlight-text-color ">concert related</span>.</p>
             <!-- search bar -->
             <form id="artist-name-form" role="search">
-                <input id="input-artist-name" type="search" name="artist-name" class="text-zinc-700" placeholder="Enter Artists Name" size="50%" />
-                <button type="submit" id="artist_search" title="Search Artist/Band">
-                            <svg viewBox="0 0 1024 1024">
-                            <path class="search-icon" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
-                            </svg>
-                    </button>
+                <input id="input-artist-name" href="#main-content" type="search" name="artist-name" class="text-zinc-700" placeholder="Enter Artist's Name" size="50%" />
+                <button type="submit" href="#main-content" id="artist_search" title="Search Artist/Band">
+                    <svg viewBox="0 0 1024 1024">
+                    <path class="search-icon" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+                    </svg>
+                </button>
             </form>
         </div>
     </header>
     <!-- main content set to 3 rows -->
-    <main class="grid grid-row-3 justify-items-center py-4 sm:py-10 md:py-20 mx-2 sm:mx-10 md:mx-20 lg:mx-40 hidden">
-        <div class="" id="artist-header">
-          <div>
-            <img id="photolink" src="">
-          </div>
-            <div class="rounded-md" id="artist-name-container">
-                <h2 class="relative px-w-1/2 text-center text-xl md:text-2xl lg:text-4xl font-bold capitalize px-4 py-2 color-bg" id="artist-name"></h2>
-            </div>
+    <main id="main-content" class="grid grid-row-3 justify-items-center py-4 sm:py-10 md:py-20 mx-2 sm:mx-10 md:mx-20 lg:mx-40 hidden">
+        <!-- 1st row:  picture and artist name -->
+        <div>
+            <div id="photolink"></div>
+            <h2 class="relative px-w-1/2 text-center text-xl md:text-2xl lg:text-4xl font-bold capitalize px-4 py-2 color-bg rounded-md" id="artist-name"></h2>
         </div>
         <!-- 2nd row: concert listing and discography (1 column for small screen, 2 columns for medium screens and up) -->
-        <div id="artist-bio" class="grid grid-cols-1 md:grid-cols-2 gap-4 w-100 py-4 sm:py-10 md:py-20 leading-6 md:leading-7 text-sm md:text-md">
-            <div id="concert" class="grid-cols-1 flex flex-col shadow-xl color-bg rounded-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-100 py-4 sm:py-10 md:py-20 leading-6 md:leading-7 text-sm md:text-md">
+            <div class="grid-cols-1 flex flex-col shadow-xl color-bg rounded-md">
                 <div class="bg-rose-800 text-center p-2 rounded-t-md">
                     <h3 class="font-bold text-lg md:text-2xl">Upcoming Concert(s)</h3>
                 </div>
-                <div id="concert-details" class="px-6 py-4 rounded-md">
-                    <ul id="concert-listings" class="pl-4 text-md md:text-lg lg:text-xl" style="list-style-type: circle;"></ul>
+                <div class="px-6 py-4 rounded-md">
+                    <ul id="concert-listings" class="pl-4 text-md lg:text-lg" style="list-style-type: circle;"></ul>
                 </div>
                 <button id="ticketbtn" class="rounded-md mt-auto m-4 bg-rose-800 p-2"> Buy Tickets</button>
             </div>
@@ -55,8 +52,8 @@
                 <div class="bg-rose-800 text-center p-2 rounded-t-md">
                     <h3 class="font-bold text-lg md:text-2xl">Discography</h3>
                 </div>
-                <div id="discography" class="px-6 py-4 rounded-md">
-                    <ul id="artist-discography" class="pl-4 text-md md:text-lg lg:text-xl" style="list-style-type: circle;"></ul>
+                <div class="px-6 py-4 rounded-md">
+                    <ul id="artist-discography" class="pl-4 text-md lg:text-lg" style="list-style-type: circle;"></ul>
                 </div>
                 <button id="albumbtn" class="rounded-md mt-auto m-4 bg-rose-800 p-2">Buy Albums</button>
             </div>
@@ -64,17 +61,16 @@
         <!-- 3rd row: music video list (1 column for small screens, 3 columns for larger screens)-->
         <div class="justify-center w-100">
             <h3 class="text-lg md:text-2xl font-bold text-center bg-rose-800 rounded-md px-10 py-2 video-header">Music Videos</h3>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6 video-container"></div>
+            <div id="video-container" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6"></div>
         </div>
     </main>
     <!-- search history -->
     <footer class="bg-rose-900  hidden">
-        <div id="past-searches" class="py-4 sm:py-10 md:py-20 mx-2 sm:mx-10 md:mx-20 lg:mx-40 text-center">
-            <h4><b>Search History</b></h4>
+        <div class="py-4 sm:py-10 md:py-20 mx-2 sm:mx-10 md:mx-20 lg:mx-40 text-center">
+            <h4 class="font-bold pb-2 text-lg md:text-2xl">Search History</h4>
             <!--New div for the search history container-->
-            <div class="list-search-history"></div>
-
-            <div>
+            <div class="list-search-history capitalize"></div>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
     <script src="https://cdn.tailwindcss.com "></script>
