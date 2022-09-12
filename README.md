@@ -13,20 +13,6 @@ You can click the button below that section and you will be taken to teh amazon 
 The initial search also returns youtube content that can be opened and viewed in another window.
 There is also a search history logged at the bottom so you can quickly view a past Artist seacrh.
 
-<<<<<<< HEAD
-## Technologies Used:
-- HTML
-- CSS
-- JS
-- Tailwind
-- YouTube API
-- SongKick API
-- MusicBrainz API
-- Imsea API
-
-In order to achieve these requirements, we needed to ensure the following was completed:
-=======
->>>>>>> develop
 
 ### badges
 ![HTML](https://img.shields.io/badge/HTML-License-blue)
