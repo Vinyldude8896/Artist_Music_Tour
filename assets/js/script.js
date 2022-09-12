@@ -23,7 +23,7 @@ var youtubeKey = "AIzaSyAVipUFCUajMgvasF6xv_p18pu4uLXmhcE";
 var youtubeUrl = 'https://www.youtube.com/watch?v=';
 var search = "";
 
-var photoUrl = "https://cors-anywhere.herokuapp.com/https://imsea.herokuapp.com/api/1?fmt=json&q=";
+var photoUrl = "https://cors-anywhere.herokuapp.com/https://imsea.herokuapp.com/api/1?fmt=json";
 
 var searchVideos = "";
 //console.log(apiLink)
