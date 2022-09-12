@@ -14,6 +14,13 @@ let artistAmazonSearch = "";
 var songkickAPIKey = "io09K9l3ebJxmxe2";
 var youtubeKey = "AIzaSyAVipUFCUajMgvasF6xv_p18pu4uLXmhcE";
 // var youtubeKey2 = "AIzaSyDeq0kG7KnVPtEpNdA7e3FTalceIrNWU2o";
+var youtubeUrl = 'https://www.youtube.com/watch?v=';
+var search = "";
+
+var photoUrl = "https://cors-anywhere.herokuapp.com/https://imsea.herokuapp.com/api/1?fmt=json";
+
+var searchVideos = "";
+//console.log(apiLink)
 
 // function to get artist name from input and split and reformat to last name, first name
 var getArtistName = function(event) {
